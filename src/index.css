@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*=== FONT-FAMILY ===*/
+@font-face {
+  font-family: "Estedad-FD-Medium.ttf";
+  src: url("./Assets/fonts/Estedad-FD-Medium.ttf");
+}
+@font-face {
+  font-family: "Estedad-FD-Bold.ttf";
+  src: url("./Assets/fonts/Estedad-FD-Bold.ttf");
+}
+@font-face {
+  font-family: "Estedad-FD-Light.ttf";
+  src: url("./Assets/fonts/Estedad-FD-Light.ttf");
+}
+
+/*=== BACE ===*/
+@layer base {
+  body {
+    @apply font-["Estedad-FD-Bold.ttf"] bg-sky-100    
+       dark:bg-Dark-MainBg;
+  }
+
+  input:focus + label {
+    @apply animate-bounce text-3xl;
+  }
+
+  select,
+  option {
+    @apply font-["Estedad-FD-Bold.ttf"]  cursor-pointer appearance-none;
+  }
+}
+
+/*=== COMPONENTS ===*/
+@layer components {
+  .TwIN-btn {
+    @apply my-2  flex justify-center items-center
+    border-2 border-teal-50
+     py-4  sm:text-[1rem] px-7 rounded-lg;
+  }
+  .TwIN-btnAdd {
+    @apply text-teal-600  bg-teal-50  hover:text-teal-50
+    hover:border-2 hover:border-teal-50 hover:bg-teal-50/20;
+  }
+  .TwIN-btnstartUser {
+    @apply bg-teal-50/20 hover:bg-teal-50 hover:text-teal-600;
+  }
+  .TwIN-btn span {
+    @apply text-2xl ml-2;
+  }
+  .TwIN-btnRegister {
+    @apply my-1 border-none px-10 py-2;
+  }
+
+  .TwIN-btnShoppingBox {
+    @apply bg-green-600 px-4 py-2 border-none rounded shadow-2xl hover:bg-green-800;
+  }
+  .TwIN-btnFinalPay {
+    @apply w-full bg-teal-700 text-green-50 px-4 py-4 border-none rounded-lg shadow-2xl hover:bg-green-800;
+  }
+  .TwIN-FooterBtn {
+    @apply bg-[#0e3a5d] px-4 py-2 border-none  
+     hover:bg-green-800
+      rounded-lg text-blue-200 shadow-2xl absolute left-16 top-7;
+  }
+  .TwIN-Btnqustion {
+    @apply bg-green-700 text-white px-2 py-2 text-[11px] rounded-lg border-none;
+  }
+  .TwIN-Btnqustion span {
+    @apply text-xl;
+  }
+  /* ===Header=== */
+  .TwIN-ActiveNavLink .TwIN-SpanDot {
+    @apply after:absolute after:w-2  after:h-2 
+    after:bg-green-500 after:left-[50%] after:translate-x-[-50%] 
+     after:bottom-[-10px] after:rounded-full text-green-400  after:animate-TwCon-nav-active;
+  }
+  .TwIN-ActiveNavLink .TwIN-NavIcon {
+    @apply text-green-500;
+  }
+  .TwIN-IconNav {
+    @apply mr-3 hover:border-y-green-600 hover:border-x-teal-100 cursor-pointer border-x-green-600 border rounded-full p-2 text-[1.3rem];
+  }
+
+  /* search */
+  .TwIN-Close {
+    @apply border-none text-green-100 hover:animate-TwCon-lamp-movement;
+  }
+  .TwIN-Close span {
+    @apply text-5xl mx-0;
+  }
+  /* TwIN-ShoppingBox */
+  .TwIN-ShoppingHolder {
+    @apply absolute top-8 rounded shadow-2xl  p-5 
+    md:w-[40rem] w-[20rem] bg-slate-300 left-1
+    before:w-4 before:h-4 before:bg-slate-300 before:-top-[7px] before:left-2 before:absolute
+     before:rotate-45 before:rounded hidden;
+  }
+
+  .TwIN-ShoppingBox li {
+    @apply md:grid-cols-4 lg:grid-cols-5;
+  }
+
+  .TwIN-ShoppingBox ul li > .TwIN-ShopTitle {
+    @apply pt-2;
+  }
+
+  /* TwIN-NavbarMobile */
+  .TwIN-NavbarMobile {
+    @apply border-b pb-5 border-blue-400 bg-slate-900
+    absolute w-[100%] min-h-screen   p-5 lg:hidden z-[1000]
+    top-0 right-0  transition duration-700 ease-in-out;
+  }
+
+  /* ========Main Page========== */
+
+  /* Tabs */
+  .TwIN-TabLi {
+    @apply hover:text-red-500 hover:dark:text-Dark-Sea cursor-pointer;
+  }
+  .Tw-TabContent {
+    @apply grid  gap-10  my-20 mb-14
+    grid-cols-1
+    sm:grid-cols-2
+    md:grid-cols-2
+    lg:grid-cols-3
+    xl:grid-cols-3
+  transition-all duration-1000;
+  }
+
+  /* ======Paginate======= */
+  .TWIN-Paginate {
+    @apply cursor-pointer hover:bg-green-700  bg-Main-Blue text-white p-3 rounded px-5;
+  }
+  .TWIN-Active {
+    @apply bg-green-700 border-2 border-dotted border-Main-Blue;
+  }
+
+  /* Confirm Alert */
+  .TWIN-ConAlert {
+    @apply bg-gray-900/80  fixed  top-0 right-0  h-full  w-full z-[1000]
+    flex justify-center items-center;
+  }
+
+  /* === Admin classes === */
+  .TWI-DashNav {
+    @apply hover:bg-emerald-300/10 transition duration-200 rounded p-1 hover:pr-2 flex justify-start items-center;
+  }
+
+  .TWI-ActiveDashNav {
+    @apply bg-emerald-300/10 pr-2;
+  }
+
+  .TWI-AdminSidbar {
+    @apply fixed  w-[14.5rem] overflow-hidden top-0  transition-all duration-100 bg-teal-600 z-[1000];
+  }
+
+  .TWI-AdminChngeWidth {
+    @apply col-start-1 col-end-3 transition-all duration-100;
+  }
+}
+
+/*=== UTILITIES ===*/
+@layer utilities {
+  /* ===HEADER=== */
+  .TwIN-NavLi:hover > ul {
+    @apply flex;
+  }
+  /* search */
+  .TwIN-SerchLink:hover .TwIN-logo {
+    @apply animate-TwCon-round-Anim text-green-400;
+  }
+  .TwIN-Signcheckbox:checked + label {
+    @apply bg-[#b44a55];
+  }
+
+  /* Shopping Box */
+  .TwIN-IconNav:hover > .TwIN-ShoppingBox {
+    @apply lg:block;
+  }
+
+  /* Shopping Page */
+  .TwIN-RadioPay input:checked ~ label {
+    @apply text-emerald-600 dark:text-emerald-700 text-[16px]  rounded;
+  }
+  .TwIN-RadioPay input:checked ~ label + .TwIN-checkBoxIcon {
+    @apply text-emerald-600 dark:text-emerald-700 flex;
+  }
+  .TwIN-RadioPay input:focus {
+    @apply text-[14px];
+  }
+
+  .TWIN-radioBtn {
+    @apply hidden;
+  }
+
+  /* Admin  Panel*/
+  .TWIN-eye:hover .close {
+    @apply hidden transition duration-300;
+  }
+  .TWIN-eye:hover .open {
+    @apply block transition duration-300;
+  }
+}

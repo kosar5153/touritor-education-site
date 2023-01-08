@@ -1,0 +1,6 @@
+.swiper-pagination-bullet.swiper-pagination-bullet-active,
+.swiper-pagination .swiper-pagination-bullets .swiper-pagination-horizontal {
+  background: rgb(4 120 87);
+  padding-right: 2rem;
+  border-radius: 5px;
+}

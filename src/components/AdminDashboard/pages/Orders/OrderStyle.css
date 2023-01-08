@@ -1,0 +1,13 @@
+/* .css-order {
+  direction: rtl;
+} */
+
+.ag-center-cols-container {
+  width: 100% !important;
+}
+/* 
+.ag-root,
+.ag-center-cols-container,
+.ag-row-even {
+    direction: rtl !important;
+} */

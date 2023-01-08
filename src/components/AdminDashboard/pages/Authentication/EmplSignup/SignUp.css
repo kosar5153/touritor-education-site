@@ -1,0 +1,10 @@
+.css-sign {
+  background: url("../../../../../Assets/images/Touritor/faq_bg.png");
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.dir-ltr {
+  direction: ltr !important;
+}

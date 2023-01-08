@@ -1,0 +1,29 @@
+/* .bg-wave {
+  background: url("../../Assets/images/Touritor/banner_shape.png"),
+    linear-gradient(#093d50, #14b8a6);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+} */
+
+.text-shadow {
+  text-shadow: 0px 0px 20px #003a31de;
+}
+
+@media screen and (max-width: 1024px) {
+  .bg-gradient-to-b.css-bgWave {
+    background: url("../../../Assets/images/Touritor/banner_shape.png"),
+      linear-gradient(#264067, #14b8a6);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -10%;
+  }
+
+  .dark .bg-gradient-to-b.css-bgWave {
+    background: url("../../../Assets/images/Touritor/image3.png"),
+      linear-gradient(rgb(39, 50, 58), rgb(39, 50, 58));
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 -10%;
+  }
+}

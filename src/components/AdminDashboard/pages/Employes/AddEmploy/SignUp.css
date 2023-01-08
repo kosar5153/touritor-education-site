@@ -1,0 +1,21 @@
+.css-sign {
+  background: url("../../../../../Assets/images/Touritor/course_image3.png") 13%
+      13%,
+    #003658;
+  /* background-position: 20% 100%; */
+  background-repeat: no-repeat;
+}
+
+.dir-ltr {
+  direction: ltr !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .css-sign {
+    background: url("../../../../../Assets/images/Touritor/course_image3.png")
+        13% 13%,
+      #003658;
+    background-size: 100px;
+    background-repeat: no-repeat;
+  }
+}

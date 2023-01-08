@@ -1,0 +1,39 @@
+stages:
+  - build
+  - test
+  - deploy
+  - analysis
+
+services:
+  - mongo:latest
+  - redis:latest
+  - mysql:latest
+
+cache:
+  paths:
+    - node_modules/
+
+variables:
+  WORK_DIR: ${CI_PROJECT_NAME}
+  BRANCH: ${CI_COMMIT_REF_NAME}
+  
+build:
+  image: docker:latest
+  services:
+    - docker:dind
+  stage: build
+  script:
+    - docker login -u $REGISTRY_LOGIN_USERNAME -p $REGISTRY_LOGIN_PASSWORD $REGISTRY_URL
+    - docker build -t $REGISTRY_URL/$GROUP_NAME/$WORK_DIR .
+    - docker push $REGISTRY_URL/$GROUP_NAME/$WORK_DIR
+
+test:
+  image: docker:latest
+  services:
+    - docker:dind
+  stage: test
+  script:
+  - apk add --update bash npm
+  - npm install
+#  - npm test
+  - echo Test Skipped

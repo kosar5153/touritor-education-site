@@ -1,0 +1,13 @@
+.css-special {
+  background: url("../../../Assets/images/Touritor/course_bg-2.png");
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dark .css-special {
+  background: url("../../../Assets/images/Touritor/faq_bg.png");
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,39 @@
+.css-scrollTop {
+  animation: scrollTop linear;
+  animation-duration: 0.5s;
+}
+
+.css-scrollTop::before {
+  content: "";
+  position: absolute;
+  background: rgb(38 64 103);
+  border-radius: 100%;
+  width: 88%;
+  height: 88%;
+  /* z-index: 999; */
+}
+
+.css-bgGradient {
+  background: linear-gradient(#00ccff, rgb(38 64 103), rgb(38 64 103));
+  animation: lineargradient 5s linear infinite;
+}
+
+@keyframes lineargradient {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scrollTop {
+  0% {
+    transform: translatex(10px);
+  }
+
+  100% {
+    transform: translatex(0px);
+  }
+}

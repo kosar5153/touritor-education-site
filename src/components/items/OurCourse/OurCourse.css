@@ -1,0 +1,8 @@
+.css-OurCourse {
+  background: url("../../../Assets/images/Touritor/course_bg.png");
+  background-size: contain;
+}
+
+.dark .css-OurCourse {
+  background-size: cover;
+}

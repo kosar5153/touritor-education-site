@@ -1,0 +1,16 @@
+.css-Footer {
+  background: url("../../../Assets/images/Touritor/newsletter_bg.png"), #264067;
+  background-position: 0%;
+}
+
+.css-FooterSearch {
+  background: url("../../../Assets/images/Touritor/banner_shape.png"),
+    rgb(20, 184, 166);
+  background-position: 0%;
+  background-size: cover;
+}
+
+.dark .css-Footer {
+  background: url("../../../Assets/images/Touritor/newsletter_bg.png"), #1a2d49;
+  background-position: 0%;
+}

@@ -1,0 +1,7 @@
+.css-teachers {
+  background: url("../../../Assets/images/Touritor/course_bg.png");
+  /* background-size: 16rem; */
+  background-size: cover;
+
+  background-position-y: 100px;
+}

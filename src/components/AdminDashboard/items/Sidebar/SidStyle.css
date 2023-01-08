@@ -1,0 +1,15 @@
+.css-scrollbar {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgb(168, 221, 199) rgba(66, 218, 200, 0.87) !important;
+}
+
+.css-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.css-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgb(168, 221, 199);
+  border-radius: 40px;
+}
+.css-scrollbar::-webkit-scrollbar-track {
+  background-color: rgba(66, 218, 200, 0.87);
+}

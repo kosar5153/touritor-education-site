@@ -1,0 +1,7 @@
+{
+    "database": "mongodb+srv://admin:1234@cluster0.ibecu.mongodb.net/Big-Bang?retryWrites=true&w=majority",
+    "jwtPrivateKey": "myKey",
+    "logfile": "logFile.log",
+    "EMAIL_ADDRESS": "EMAIL_ADDRESS",
+    "NODEMAILER_PASSWORD": "NODEMAILER_PASSWORD"
+}
